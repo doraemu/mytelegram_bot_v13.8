@@ -5,6 +5,7 @@
 	"Username": "",
 	"Modules": {
 		"batchforward": "批量转发模块",
-		"contribute": "投稿模块"
+		"contribute": "投稿模块",
+		"aichat": "AI聊天模块"
 	}
 }
