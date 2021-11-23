@@ -5,18 +5,10 @@ Python Telegram bot for Telegram API 13.8.1
 pip install python-telegram-bot  
 pip install requests  
 
-修改配置文件  
-{  
-	"Admin": 0,     #管理员ID  
-	"Token": "",    #机器人Token  
-	"ID": 0,        #机器人ID 启动后会自动填加  
-	"Username": "", #机器人用户名 启动后会自动填加  
-	"Modules": {  
-		"batchforward": "批量转发模块",  
-		"contribute": "投稿模块",  
-		"aichat": "AI聊天模块"  
-	}  
-}  
+修改配置文件：\src\modules\database\config.json  
+
+"Admin": 0,     #管理员ID  
+"Token": "",    #机器人Token  
 
 基本功能：  
 1.投稿：可接收的投稿类型：图片、视频，支持多频道转发。  
