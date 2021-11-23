@@ -36,7 +36,7 @@ def reload_modules():
 
 def process_command(update: Update, context: CallbackContext):
     if update.channel_post: return
-    command = update.message.text[1:].replace(CONFIG['Username'], '').lower()
+    command = update.message.text[1:]
     if command == 'start':
         update.message.reply_text(StartText)
         return
@@ -78,7 +78,7 @@ def main():
 
     dispatcher.add_handler(telegram.ext.MessageHandler(Filters.command, process_command))
 
-    dispatcher.add_handler(telegram.ext.MessageHandler(Filters.photo | Filters.video, process_msg))
+    dispatcher.add_handler(telegram.ext.MessageHandler(Filters.photo | Filters.video | Filters.text, process_msg))
 
     dispatcher.add_handler(telegram.ext.CallbackQueryHandler(process_callback))
 

@@ -60,7 +60,7 @@ def contribute_post(bot, query, ptype, cid):
 def process_command(update, context):
     if update.message.from_user.id != MAIN_CONFIG['Admin']: return
         
-    command = update.message.text[1:].replace(MAIN_CONFIG['Username'], '').lower()
+    command = update.message.text[1:]
     args = command.split(" ")
     if args[0] == 'setsubgroup':
         CONFIG['Group_ID'] = update.message.chat_id
